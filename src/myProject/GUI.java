@@ -7,8 +7,9 @@ import java.awt.event.ActionListener;
 
 /**
  * This class is used for ...
- * @autor Juan Pablo Pantoja Gutierrez juan.pablo.pantoja@correounivalle.edu.co
- * @version v.1.0.0 date:21/11/2021
+ * @autor Juan Pablo Pantoja Gutierrez juan.pablo.pantoja@correounivalle.edu.co 2040104
+ * @autor Johan Loaiza Téllez loaiza.johan@correounivalle.edu.co 2040882
+ * @version v.1.0.8 date:14/12/2021
  */
 public class GUI extends JFrame {
     private static final String MENSAJE_INICIO="Juego Carta Mayor\n"

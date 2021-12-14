@@ -1,10 +1,25 @@
 package myProject;
 
+/**
+ * Class JuegoCartas is a game that verify who have the highest card or the higher deck
+ * estado = 1 User wins
+ * estado = 2 CPU wins
+ * estado = 3 User wins, deck winner condition
+ * estado = 4 CPU wins, deck winner condition
+ * estado = 5 Draw
+ * @autor Juan Pablo Pantoja Gutierrez juan.pablo.pantoja@correounivalle.edu.co 2040104
+ * @autor Johan Loaiza Téllez loaiza.johan@correounivalle.edu.co 2040882
+ * @version v.1.0.8 date:14/12/2021
+ */
 public class JuegoCartas {
     private Cartas carta1, carta2;
     private int cartaJugador, cartaMaquina, paloCartaJugador, paloCartaMaquina, estado, flag;
     private String[] estadoToString;
     private int[] valorCartas;
+
+    /**
+     * Class Constructor
+     */
 
     public JuegoCartas(){
         carta1 = new Cartas();
@@ -13,6 +28,10 @@ public class JuegoCartas {
         estadoToString = new String[2];
         flag = 0;
     }
+
+    /**
+     * Establish the number of the card and the deck
+     */
 
     public void determinarCarta(){
         valorCartas[0] = carta1.getValorCarta();
@@ -59,6 +78,10 @@ public class JuegoCartas {
         }
     }
 
+    /**
+     * Establish game state according to estado attribute value
+     */
+
     public void juegoCartas(){
         if(flag==0){
             if(cartaJugador > cartaMaquina){
@@ -90,6 +113,11 @@ public class JuegoCartas {
     public int getCartaMaquina(){
         return  cartaMaquina;
     }
+
+    /**
+     * Establish Message according to estado attribute value
+     * @return Message for the view class
+     */
 
     public String[] getEstadoToString() {
         switch (estado){

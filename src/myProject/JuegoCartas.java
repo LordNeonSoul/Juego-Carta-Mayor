@@ -127,10 +127,10 @@ public class JuegoCartas {
             case 2: estadoToString[0]="Tu carta "+cartaJugador+" es menor a la carta de la máquina "+cartaMaquina+".";
                     estadoToString[1]="¡PERDISTE!, Sacaste un menor número que la máquina.\nBuena suerte la próxima ronda.";
                     break;
-            case 3: estadoToString[0]="Tu carta "+cartaJugador+" es igual que la de la máquina "+cartaMaquina+" sin embargo tu palo es mayor.";
+            case 3: estadoToString[0]="Tu carta "+cartaJugador+" es igual que la de la máquina "+cartaMaquina+".\nSin embargo tu palo es mayor.";
                     estadoToString[1]="¡GANASTE!, Sacaste un mayor palo que la máquina.";
                     break;
-            case 4: estadoToString[0]="Tu carta "+cartaJugador+" es igual que la de la máquina "+cartaMaquina+" sin embargo tu palo es menor.";
+            case 4: estadoToString[0]="Tu carta "+cartaJugador+" es igual que la de la máquina "+cartaMaquina+".\nSin embargo tu palo es menor.";
                     estadoToString[1]="¡PERDISTE!, Sacaste un menor palo que la máquina.\nBuena suerte la próxima ronda.";
                     break;
         }

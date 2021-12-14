@@ -19,6 +19,9 @@ public class Cartas {
     public int getValorCarta(){
         Random aleatorio = new Random();
         valorCarta = aleatorio.nextInt(48)+1;
+        if(valorCarta==8 || valorCarta==9 || valorCarta==20 ||valorCarta==21 ||valorCarta==32 ||valorCarta==33 ||valorCarta==44 ||valorCarta==45){
+            getValorCarta();
+        }
         return valorCarta;
     }
 }

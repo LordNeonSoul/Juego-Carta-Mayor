@@ -76,6 +76,9 @@ public class JuegoCartas {
                 }
             }
         }
+        if ((cartaJugador==cartaMaquina)&&(paloCartaMaquina==paloCartaJugador)){
+            determinarCarta();
+        }
     }
 
     /**
@@ -96,8 +99,6 @@ public class JuegoCartas {
                         }else{
                             if(paloCartaJugador < paloCartaMaquina){
                                 estado = 4;
-                            }else{
-                                estado = 5;
                             }
                         }
                     }
@@ -132,9 +133,6 @@ public class JuegoCartas {
                     break;
             case 4: estadoToString[0]="Tu carta "+cartaJugador+" es igual que la de la máquina "+cartaMaquina+" sin embargo tu palo es menor.";
                     estadoToString[1]="¡PERDISTE!, Sacaste un menor palo que la máquina.\nBuena suerte la próxima ronda.";
-                    break;
-            case 5: estadoToString[0]="Tu carta "+cartaJugador+" es igual que la de la máquina "+cartaMaquina+" sin embargo\nsus palos son iguales.";
-                    estadoToString[1]="¡EMPATE!, Tu palo es igual que el de la máquina.";
                     break;
         }
         return estadoToString;

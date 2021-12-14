@@ -18,7 +18,7 @@ public class GUI extends JFrame {
             + "\nSi tu carta es igual a la de la máquina el ganador se decidirá por el palo de cartas siendo:"
             + "\nSi la carta es del palo de Oros le gana a Copas, Espadas, Bastos"
             + "\nSi la carta es del palo de Copas le gana a las Espadas y Bastos"
-            + "\nsi la carta es del palo de Espadas le gana a los Bastos";
+            + "\nSi la carta es del palo de Espadas le gana a los Bastos";
 
     private Header headerProject;
     private JLabel carta1, carta2;
@@ -27,14 +27,13 @@ public class GUI extends JFrame {
     private ImageIcon imageCarta;
     private JTextArea resultadosCartas, mensajeSalida;
     private Escucha escucha;
-    //private ModelCraps modelCraps;
+    private JuegoCartas juegoCartasMayor;
 
     /**
      * Constructor of GUI class
      */
     public GUI(){
         initGUI();
-
         //Default JFrame configuration
         this.setTitle("Juego Craps");
         this.setUndecorated(true);
@@ -55,6 +54,7 @@ public class GUI extends JFrame {
         GridBagConstraints constraints = new GridBagConstraints();
         //Create Listener Object and Control Object
         escucha = new Escucha();
+        juegoCartasMayor = new JuegoCartas();
         //Set up JComponents
         headerProject = new Header("Juego Carta Mayor", Color.BLACK);
         constraints.gridx=0;
@@ -148,7 +148,16 @@ public class GUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getSource()==jugar){
+                juegoCartasMayor.determinarCarta();
+                int[] cartas = juegoCartasMayor.getValorCartas();
+                imageCarta = new ImageIcon(getClass().getResource("/Cartas/"+cartas[0]+".png"));
+                carta1.setIcon(imageCarta);
+                imageCarta = new ImageIcon(getClass().getResource("/Cartas/"+cartas[1]+".png"));
+                carta2.setIcon(imageCarta);
+                juegoCartasMayor.juegoCartas();
 
+                resultadosCartas.setText(juegoCartasMayor.getEstadoToString()[0]);
+                mensajeSalida.setText(juegoCartasMayor.getEstadoToString()[1]);
             }else{
                 if(e.getSource()==ayuda){
                     JOptionPane.showMessageDialog(null,MENSAJE_INICIO);

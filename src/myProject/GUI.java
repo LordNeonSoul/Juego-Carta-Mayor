@@ -81,7 +81,7 @@ public class GUI extends JFrame {
         constraints.anchor=GridBagConstraints.LINE_END;
         this.add(salir,constraints);
 
-        imageCarta = new ImageIcon(getClass().getResource("/Cartas/Ba1.png"));
+        imageCarta = new ImageIcon(getClass().getResource("/Cartas/carta.png"));
         carta1 = new JLabel(imageCarta);
         carta2 = new JLabel(imageCarta);
 

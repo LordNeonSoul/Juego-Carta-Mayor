@@ -6,7 +6,6 @@ package myProject;
  * estado = 2 CPU wins
  * estado = 3 User wins, deck winner condition
  * estado = 4 CPU wins, deck winner condition
- * estado = 5 Draw
  * @autor Juan Pablo Pantoja Gutierrez juan.pablo.pantoja@correounivalle.edu.co 2040104
  * @autor Johan Loaiza Téllez loaiza.johan@correounivalle.edu.co 2040882
  * @version v.1.0.8 date:14/12/2021
